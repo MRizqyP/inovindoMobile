@@ -57,3 +57,7 @@ buck-out/
 
 # CocoaPods
 /ios/Pods/
+
+# Android - index.android.bundle
+android/app/src/main/assets/index.android.bundle
+*.hprof
