@@ -1,0 +1,71 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+  package="com.inovindorn">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-feature android:name="android.hardware.camera" android:required="false" /> 
+    <uses-feature android:name="android.hardware.camera.front" android:required="false" /> 
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />                                               
+     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+     <uses-permission android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION" />
+     <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <permission
+    android:name="com.inovindorn.permission.C2D_MESSAGE"
+    android:protectionLevel="signature" />
+    <uses-permission android:name="com.inovindorn.permission.C2D_MESSAGE" />
+
+    <application
+      android:name=".MainApplication"
+      android:label="@string/app_name"
+      android:icon="@mipmap/ic_launcher_round"
+      android:roundIcon="@mipmap/ic_launcher"
+      android:allowBackup="false"
+      android:usesCleartextTraffic="true"
+      android:theme="@style/AppTheme">
+      <meta-data
+      android:name="pspdfkit_license_key"
+      android:value="uaV2HzKi199y_JTHD1Mvj-jSZV1dbW3C0TPCYTa7ldfnjWbJZDT2mI73GJZSgTI6rugXRjPqZH71l9wKBRY9_YmAKAO5eAeLPs6AhTcDMbhjzvXURtPVI_BqpQtBcbm7trTDUQvngw3-Exe4o8WT4PII05vzJxKmj9sTUOQsvff7GN8mqW1oSiU9C12eoEoq1awFa0X1GeEmhF_RUQaJBzflTI_9lbn-pZzvn0ErjEvUtaewTmsd_S_qP6dW0ejoYfRA1rkNhMUbeLqcm0N5mJSZgX-qxg1fVl1HySbOsjHZw7gUMGnnO9T0j_sk3p5742yso8tg52CUMJMO3D43Ynha2FMxRDPOobwSsRUqQ-nD2bJlG4L2tut_h3KdqCd7guhD5ptHBgWDkO_FyvujNQFaR_SzDlt-tyh5LPyzaQX4BIi43TEI1NhqWQZW3hA8"/>
+      <activity
+        android:name=".MainActivity"
+        android:label="@string/app_name"
+        android:configChanges="keyboard|keyboardHidden|orientation|screenSize|uiMode"
+        android:launchMode="singleTask"
+        android:windowSoftInputMode="adjustPan">
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+            <category android:name="android.intent.category.LAUNCHER" />
+            <action android:name="android.intent.action.DOWNLOAD_COMPLETE"/>
+            
+        </intent-filter>
+      </activity>
+
+     <meta-data  android:name="com.dieam.reactnativepushnotification.notification_foreground"
+                    android:value="false"/>
+        <!-- Change the resource name to your App's accent color - or any other color you want -->
+        <meta-data  android:name="com.dieam.reactnativepushnotification.notification_color"
+                    android:resource="@color/white"/> <!-- or @android:color/{name} to use a standard color -->
+
+        <receiver android:name="com.dieam.reactnativepushnotification.modules.RNPushNotificationActions" />
+        <receiver android:name="com.dieam.reactnativepushnotification.modules.RNPushNotificationPublisher" />
+        <receiver android:name="com.dieam.reactnativepushnotification.modules.RNPushNotificationBootEventReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.QUICKBOOT_POWERON" />
+                <action android:name="com.htc.intent.action.QUICKBOOT_POWERON"/>
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name="com.dieam.reactnativepushnotification.modules.RNPushNotificationListenerService"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+      <activity android:name="com.facebook.react.devsupport.DevSettingsActivity" />
+    </application>
+
+</manifest>

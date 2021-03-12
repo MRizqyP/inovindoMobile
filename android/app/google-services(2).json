@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "54292009470",
+    "firebase_url": "https://inovindorn.firebaseio.com",
+    "project_id": "inovindorn",
+    "storage_bucket": "inovindorn.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:54292009470:android:b9b1afb6f3eeb519eab0af",
+        "android_client_info": {
+          "package_name": "com.inovindorn"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "54292009470-s9pv0c6k595jc1fqgqj5jjmq27nf6rkp.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.inovindorn",
+            "certificate_hash": "d8a939fa95814bc757ea7c3ad351deabe1cb991e"
+          }
+        },
+        {
+          "client_id": "54292009470-4iina7moal1gfeejsjfm6st9vspukrgi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDO1kXtmY7tvFbNnJexxjDHqU8VdZm1qhs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "54292009470-4iina7moal1gfeejsjfm6st9vspukrgi.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
